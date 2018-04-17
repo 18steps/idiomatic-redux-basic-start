@@ -12,7 +12,7 @@ const byId = (state = {}, action) => {
 
 const list = (state = [], action) => {
   if (action.response) {
-    return [ ...state, ...action.response.result ];
+    return [...new Set([ ...state, ...action.response.result ])];
   }
   return state;
 };

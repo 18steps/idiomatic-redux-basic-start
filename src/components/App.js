@@ -21,7 +21,7 @@ class App extends Component {
         }</ul>
         <button
           onClick={() => fetchStarWars()}
-        >Load more
+        >Load
         </button>
       </div>
     );

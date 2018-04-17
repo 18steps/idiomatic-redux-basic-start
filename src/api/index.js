@@ -5,19 +5,20 @@ const delay = (ms) =>
   new Promise(resolve =>
     setTimeout(resolve, ms));
 
-const fetchStarWars = () =>
-  delay(500).then(() => [
-    {
-      id: v4(),
-      name: 'Yoda',
-      faction: 'Rebels',
-    },
+const people = [
+  {
+    id: v4(),
+    name: 'Yoda',
+    faction: 'Rebels',
+  },
 
-    {
-      id: v4(),
-      name: 'Darth Vader',
-      faction: 'Empire',
-    },
-  ]);
+  {
+    id: v4(),
+    name: 'Darth Vader',
+    faction: 'Empire',
+  },
+];
+const fetchStarWars = () =>
+  delay(500).then(() => people);
 
 export { fetchStarWars };
