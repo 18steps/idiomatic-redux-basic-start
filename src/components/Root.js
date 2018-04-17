@@ -1,30 +1,14 @@
 import React from 'react';
 import App from './App';
-import { createStore, applyMiddleware } from 'redux';
-
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 import { Provider } from 'react-redux';
-import app from '../reducers';
+import store from '../configureStore';
 
-
-const store = createStore(
-  app,
-  composeWithDevTools(
-    applyMiddleware(...[]),
-  ),
-);
-
-const starWars = {
-  people: [],
-};
 
 const Root = () => (
   <Provider store={store}>
-    <App
-      starWars={starWars}
-    />
+    <App />
   </Provider>
 );
 
