@@ -5,7 +5,7 @@ import {
   FETCH_STARWARS_FAILURE,
   FETCH_STARWARS_REQUEST,
   FETCH_STARWARS_SUCCESS,
-} from '../api/names';
+} from './names';
 
 import { normalize } from 'normalizr';
 
